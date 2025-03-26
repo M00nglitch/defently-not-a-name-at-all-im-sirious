@@ -37,7 +37,7 @@ while i < 1000:
 
    xs.append(new_x)
    ys.append(new_y)
-   zs.append(new_z)     
+   zs.append(new_z)
 i = 0
 while i < 1000:
    i += 1
@@ -69,11 +69,12 @@ while i < 1000:
 print(xs[-1],ys[-1],zs[-1])
 print(xs2[-1],ys2[-1],zs2[-1])
 
-from matplotlib.pyplot import figure,show
+from matplotlib.pyplot import figure,savefig
 from mpl_toolkits.mplot3d import Axes3D
+
 
 fig = figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(xs, ys, zs)
 ax.scatter(xs2, ys2, zs2)
-show()       
+savefig('bla.png')
